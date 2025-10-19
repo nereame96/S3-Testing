@@ -1,6 +1,10 @@
+const movies = require("./data");
+
 // Exercise 1: Get the array of all directors.
 function getAllDirectors(array) {
-  let result =  ???;
+  let result =  '';
+  const directorsArray = movies.map( element => element.director)
+  result = directorsArray
   console.log("EXERCICE 1 ->", result);
   return result;
 }
