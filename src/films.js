@@ -50,7 +50,16 @@ function orderAlphabetically(array) {
 }
 
 // Exercise 5: Order by year, ascending
-function orderByYear() {
+function orderByYear(array) {
+
+  const orderMovie = array.toSorted((a, b) => {
+    
+    if(a.year !== b.year) return a.year - b.year
+    return a.title.localeCompare(b.title) }
+  )
+
+  console.log("EXERCICE 5 ->", orderMovie);
+  return orderMovie;
 
 }
 
