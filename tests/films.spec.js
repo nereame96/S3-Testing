@@ -293,9 +293,47 @@ describe('Function "orderByYear"', () => {
 // Exercise 6
 // YOUR CODE HERE. Test moviesAverageByCategory()
 describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
+  it('should be declared', () => {
+    expect(typeof moviesAverageByCategory).toBe('function');
   });
+
+  it('should return a number', () => {
+    expect(typeof moviesAverageByCategory(movies, 'Drama')).toBe('number');
+  });
+
+  it('should be different from NaN', () => {
+    expect(moviesAverageByCategory(movies, 'Drama')).not.toBeNaN();
+  });
+
+  it(' should return the average score of movies selecting only the films genre. With 2 decimals! ', () => {
+      expect(moviesAverageByCategory([
+        {
+          title: 'The Lord of the Rings: The Return of the King',
+          year: 2003,
+          director: 'Peter Jackson',
+          duration: '3h 21min',
+          genre: ['Adventure', 'Drama', 'Fantasy'],
+          score: 8.9
+        },
+        {
+          title: 'Il buono, il brutto, il cattivo',
+          year: 1966,
+          director: 'Sergio Leone',
+          duration: '3h 2min',
+          genre: ['Western'],
+          score: 8.9
+        },
+        {
+          title: 'Fight Club',
+          year: 1999,
+          director: 'David Fincher',
+          duration: '2h 19min',
+          genre: ['Drama'],
+          score: 8.8
+        }
+      ], 'Drama')).toBe(8.85);
+    });
+
 });
 
 // Exercise 7
