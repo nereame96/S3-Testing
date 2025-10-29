@@ -1,6 +1,6 @@
 const movies = require("./data");
 
-// Exercise 1: Get the array of all directors.
+
 function getAllDirectors(array) {
   
   const directorsArray = array.map( movie => movie.director)
@@ -9,7 +9,7 @@ function getAllDirectors(array) {
   return directorsArray;
 }
 
-// Exercise 2: Get the films of a certain director
+
 function getMoviesFromDirector(array, director) {
   const moviesFromDirectorArray = array.filter( movie => movie.director === director)
 
@@ -17,10 +17,10 @@ function getMoviesFromDirector(array, director) {
   return moviesFromDirectorArray;
 }
 
-// Exercise 3: Calculate the average of the films of a given director.
+
 function moviesAverageOfDirector(array, director) {
   const directorMovies = getMoviesFromDirector(array, director)
-  const scoreMovies = directorMovies.filter(movie => movie.score) //Filtra por aquellas pelis que SI tienen score, para que no de errores
+  const scoreMovies = directorMovies.filter(movie => movie.score) 
 
   if (scoreMovies.length === 0) return 0;
 
@@ -34,7 +34,7 @@ function moviesAverageOfDirector(array, director) {
   return result;
 }
 
-// Exercise 4:  Alphabetic order by title 
+
 function orderAlphabetically(array) {
 
   const titles = array.map( movie => movie.title)
@@ -49,7 +49,7 @@ function orderAlphabetically(array) {
   return result;
 }
 
-// Exercise 5: Order by year, ascending
+
 function orderByYear(array) {
 
   const orderMovie = array.toSorted((a, b) => {
@@ -63,7 +63,7 @@ function orderByYear(array) {
 
 }
 
-// Exercise 6: Calculate the average of the movies in a category
+
 function moviesAverageByCategory(array, genre) {
   const moviesGenre = array.filter(movie => movie.genre.includes(genre))
 
@@ -77,7 +77,7 @@ function moviesAverageByCategory(array, genre) {
   return result;
 }
 
-// Exercise 7: Modify the duration of movies to minutes
+
 function hoursToMinutes(array) {
   
   const newMoviesArray =  array.map(obj => {
@@ -93,7 +93,7 @@ function hoursToMinutes(array) {
   return newMoviesArray;
 }
 
-// Exercise 8: Get the best film of a year
+
 function bestFilmOfYear(array, year) {
   const moviesPerYear = array.filter( obj => obj.year === year) 
 
@@ -118,8 +118,7 @@ return [result]
 
 
 
-// The following is required to make unit tests work.
-/* Environment setup. Do not modify the below code. */
+
 if (typeof module !== 'undefined') {
   module.exports = {
     getAllDirectors,
