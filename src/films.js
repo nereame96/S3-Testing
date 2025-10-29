@@ -82,8 +82,9 @@ function hoursToMinutes(array) {
   
   const newMoviesArray =  array.map(obj => {
     const [hours, minutes] = obj.duration.split(' ')
+    const minuteSafe = minutes || '0min'
     const hoursNoText = hours.replace('h', '')
-    const minutesNoText = minutes.replace('min', '')
+    const minutesNoText = minuteSafe.replace('min', '')
      
     
     return {...obj, duration: (+hoursNoText * 60) + (+minutesNoText) }})
@@ -93,8 +94,26 @@ function hoursToMinutes(array) {
 }
 
 // Exercise 8: Get the best film of a year
-function bestFilmOfYear() {
-  
+function bestFilmOfYear(array, year) {
+  const moviesPerYear = array.filter( obj => obj.year === year) 
+
+  if (moviesPerYear.length === 0) return null
+
+  const initialBestMovie = { score: 0 };
+  const result = moviesPerYear.reduce((acc, currentMovie ) => {
+    
+    if (currentMovie.score > acc.score) {
+      return currentMovie
+    } else {
+      return acc
+    }
+
+  } , initialBestMovie)
+
+
+console.log("EXERCICE 8 ->", result);
+return [result]
+
 }
 
 

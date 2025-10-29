@@ -1,86 +1,84 @@
 # Sprint 3 IT Academy | Video management tool
 
-## Introduction
 
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
+## Description
 
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+This project focuses on applying core **JavaScript functional programming techniques** (e.g., `.map()`, `.reduce()`) to process and analyze a dataset of movie records. The primary objective is to write efficient, pure functions that successfully pass a comprehensive suite of unit tests defined using the **Jest** library.
 
-<br>
+-----
 
-## Requirements
+## 🎯 Objectives
 
+  * **Functional JavaScript:** Write efficient functions with a single responsibility, utilizing modern array methods (`map`, `reduce`, `sort`).
+  * **Unit Testing with Jest:** Define code to satisfy strict validation checks for data filtering, transformation, and aggregation.
+  * **Data Management:** Master complex data manipulation tasks such as calculating average scores, multi-criteria sorting (e.g., by year and title), and ensuring **data immutability**.
+  * **Data Transformation:** Implement robust logic for converting non-standard string formats (e.g., movie duration: `"Xh Ymin"`) into standardized numerical data (total minutes).
 
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
+-----
+
+## 💻 Technologies Used
+
+| Technology | Purpose |
+| :--- | :--- |
+| **JavaScript (ES6+)** | Core language for implementation. |
+| **Jest** | Primary framework used for running and validating unit tests. |
+| **Node.js & npm** | Required environment for test execution and dependency management. |
+
+-----
+
+## 📋 Requirements and Installation (Testing)
+
+**🚨 IMPORTANT:** To run the unit tests, the project requires the Node.js runtime environment. The browser is only used for viewing the final application (if applicable).
+
+### 🛠 Installation
+
+1.  **Clone the Repository:**
+
+    ```bash
+    git clone [repository URL]
+    cd [Your Project Folder]
+    ```
+
+2.  **Install Dependencies:** (This installs Jest and all necessary packages.)
+
+    ```bash
+    npm install
+    ```
+
+3.  **Run the Tests:** (This executes the validation against your implemented functions.)
+
+    ```bash
+    npm run test:watch
+    ```
+
+    *(Note: Check the generated `test-results.html` file for a visual report of all passing/failing tests.)*
+
+-----
+
+## 📁 Project Structure
+
+The project follows a standard testing structure to keep source code separate from the testing specifications.
+
+```
+📁 starter-code-frontend-sprint-3-movies
+├── 📁 .github
+├── 📁 node_modules
+├── 📁 src
+│   ├── 📄 data.js
+│   ├── 📄 films.js
+│   └── 📄 index.html
+├── 📁 tests
+│   └── 📄 films.spec.js
+├── 📄 package-lock.json
+├── 📄 test-results.html
+└── 📄 README.md
+
 ```
 
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
-```
+-----
 
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
-```
+## 📋 Takeaways
 
-<br>
-
-## Submission
-
-1. Upon completion, run the following commands:
-
-```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
-```
-
-2. Create Pull Request.
-
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
-
-
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-## Tests!
-
-
-```shell
-$ npm install
-$ npm run test:watch
-```
-
-And last, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
-
-Apart from the statement, you will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, all tests are already defined here!
-
-<br>
-
-## Instructions
-
-You have the following indications from the frontend responsible:
-
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
-
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
-
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
-
-- The logic to implement will be placed in the src/films.js file.
-
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
-
-- Don't forget to include the capture of the test results in the virtual campus.
-
-
+  * Mastered writing **pure functions** that avoid side effects (e.g., using the Spread operator for immutability).
+  * Gained expertise in complex array manipulation using chained methods (`filter`, `map`, `reduce`).
+  * Developed skills in writing code to directly satisfy predefined **unit test requirements**.
